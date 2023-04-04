@@ -1,0 +1,51 @@
+{
+  "name": "vite-plugin-transform-micro-app",
+  "version": "0.0.1-alpha-1",
+  "description": "The micro-app subapplication was developed using vite",
+  "type": "module",
+  "main": "index.js",
+  "types": "types",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hlwen/vite-plugin-transform-micro-app.git"
+  },
+  "author": "氧气瓶 <382910477@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "test": "vitest run",
+    "types": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/plugin-proposal-dynamic-import": "^7.18.6",
+    "@babel/plugin-transform-modules-systemjs": "^7.20.11",
+    "fast-glob": "^3.2.12"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "node-fetch": "^3.3.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-plugin-utils": "^0.4.0",
+    "vitest": "^0.27.2"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "import",
+    "dynamic"
+  ],
+  "files": [
+    "types",
+    "dist"
+  ]
+}
